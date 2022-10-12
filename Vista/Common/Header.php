@@ -1,3 +1,5 @@
+<?php
+include_once ("/xampp/htdocs/TPInvestigacion/configuracion.php");?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

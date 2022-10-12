@@ -1,6 +1,5 @@
 <?php
 include_once("Common/Header.php");
-include_once('../Control/C_Producto.php');
 $objControlProducto = new C_Producto();
 $arrayProductos = $objControlProducto->buscar(NULL);
 if ($arrayProductos != null) {
