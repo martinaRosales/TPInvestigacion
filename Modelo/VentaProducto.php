@@ -10,6 +10,7 @@ class VentaProducto
 
     public function __construct()
     {
+        $this->idVentaProducto = '';
         $this->objProducto = '';
         $this->objVenta = '';
         $this->cantidad = '';

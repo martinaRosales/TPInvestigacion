@@ -1,23 +1,25 @@
 <?php
-include_once '../Modelo/Venta.php';
+include_once '../Modelo/VentaProducto.php';
 
-class C_Venta
+class C_VentaProducto
 {
 
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
      * @param array $param
-     * @return Venta
+     * @return VentaProducto
      */
     private function cargarObjeto($param)
     {
         $obj = null;
-        if (array_key_exists('idVenta', $param)) {
+        if (array_key_exists('idVentaProducto', $param)) {
 
-            $obj = new Venta();
+            $obj = new VentaProducto();
             $obj->cargar(
+                $param['idVentaProducto'],
                 $param['idVenta'],
-                $param['fecha']
+                $param['idProducto'],
+                $param['cantidad']
             );
         }
         return $obj;
@@ -32,9 +34,9 @@ class C_Venta
     private function cargarObjetoConClave($param)
     {
         $obj = null;
-        if (isset($param['idVenta'])) {
-            $obj = new Venta();
-            $obj->cargar($param['idVenta'], null, null, null, null, null);
+        if (isset($param['idVentaProducto'])) {
+            $obj = new VentaProducto();
+            $obj->cargar($param['idVentaProducto'], null, null, null);
         }
         return $obj;
     }
@@ -48,7 +50,7 @@ class C_Venta
     private function seteadosCamposClaves($param)
     {
         $resp = false;
-        if (isset($param['idVenta']))
+        if (isset($param['idVentaProducto']))
             $resp = true;
         return $resp;
     }
@@ -109,12 +111,16 @@ class C_Venta
         $where = " true "; 
         if ($param<>NULL){
             $where .= '';
+            if  (isset($param['idVentaProducto']))
+                $where.=" and idVentaProducto ='".$param['idVentaProducto']."'"; 
             if  (isset($param['idVenta']))
-                $where.=" and idVenta ='".$param['idVenta']."'"; 
-            if  (isset($param['fecha']))
-                    $where.=" and fecha ='".$param['fecha']."'";
+                    $where.=" and idVenta ='".$param['idVenta']."'";
+            if  (isset($param['idProducto']))
+                    $where.=" and idProducto ='".$param['idProducto'] ."'";
+            if  (isset($param['cantidad']))
+                    $where.=" and cantidad ='".$param['cantidad'] ."'";
         }
-        $obj = new Venta();
+        $obj = new VentaProducto();
         $arreglo =  $obj->listar($where);  
         
         return $arreglo;
