@@ -1,6 +1,7 @@
 <?php
-include_once ("/xampp/htdocs/TPInvestigacion/configuracion.php");?>
+include_once("/xampp/htdocs/TPInvestigacion/configuracion.php"); ?>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,36 +25,38 @@ include_once ("/xampp/htdocs/TPInvestigacion/configuracion.php");?>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="Estilos.css">
-    <header id="navbar">
-        <nav class="navbar navbar-expand-lg" >
-        <div class="container-fluid" id="cabecera">
-            <a class="navbar-brand text-light fs-5" href="#">Besto 3D</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active text-light fs-5" aria-current="page" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link text-light fs-5" href="#">Carrito</a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Productos
-                </a>
-                <ul class="dropdown-menu" id="dropdown">
-                    <li><a class="dropdown-item text-light" href="#">Impresiones 2D</a></li>
-                    <li><a class="dropdown-item text-light" href="#">Impresiones 3D</a></li>
-                    <li><a class="dropdown-item text-light" href="#">Accesorios</a></li>
-                </ul>
-                </li>
-            </ul>
-            </div>
-        </div>
-        </nav>
-    </header>    
-    
+
+
 </head>
+
 <body>
+    <header id="navbar ">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid" id="cabecera">
+                <a class="navbar-brand text-light fs-5" href="#">Besto 3D</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light fs-5" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-5" href="#">Carrito</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" id="dropdown">
+                                <li><a class="dropdown-item text-light" href="#">Impresiones 2D</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Impresiones 3D</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Accesorios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
