@@ -10,7 +10,7 @@ $data = array ();
 foreach($result as $row){
     $dato = array(
         'NOMBRE' => $row->getNombre(),
-        'STOCK' => 100.5,
+        'STOCK' => number_format($row->getPrecio(),2,'.'),
     );
 
     $data[] = $dato;
@@ -22,6 +22,7 @@ $data = json_encode(array_values($data));
 
 ?>
 
+<<<<<<< HEAD
 <div>Aca se puede ver el grafico y descargarlo</div>
 <!-- Styles -->
 <style>
@@ -30,6 +31,11 @@ $data = json_encode(array_values($data));
   height: 500px;
 }
 </style>
+=======
+<div class="bg-light container">
+    Aca se puede ver el grafico y descargarlo
+</div>
+>>>>>>> 53a6f67a3db8662419ad08a1d2a5a838885881b0
 
 <!-- Resources -->
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
