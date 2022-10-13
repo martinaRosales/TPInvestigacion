@@ -2,7 +2,9 @@
 include ('Common/Header.php');
 ?>
 
-<div>Aca se puede ver el grafico y descargarlo</div>
+<div class="bg-light container">
+    Aca se puede ver el grafico y descargarlo
+</div>
 
 <?php
 include ('Common/Footer.php');

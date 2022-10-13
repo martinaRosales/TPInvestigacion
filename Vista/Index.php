@@ -14,7 +14,6 @@ $i = 0;
         <div>
         <?php
         while ($i < $cantidadProductos) {
-
         ?>
             <div>
                 <?php echo $arrayProductos[$i]->getNombre() ?>
