@@ -1,23 +1,27 @@
 header {
     background-color: #E91E63;   
 }
-
+body {
+background-image: url("../Img/fondo.png");
+background-size: contain;
+}
 footer{
     background-color: #E91E63;  
     position: fixed;
     left: 0px;
     bottom:0px;
     width: 100%;
+    height: fit-content;
 }
 #dropdown{
     background-color: #E91E63;
 }
 
-body{
-   background-color: black;
-}
-
 #cuerpo {
     background-color: #ffcadb;
 }
- 
+
+#navbarHeader a:hover{
+    background-color: #e33670;
+}
+

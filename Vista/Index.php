@@ -10,18 +10,23 @@ if ($arrayProductos != null) {
 $i = 0;
 ?>
 <div>
-    <?php
-    while ($i < $cantidadProductos) {
-
-    ?>
+    <div id="cuerpo" class="">
         <div>
-            <?php echo $arrayProductos[$i]->getNombre() ?>
+        <?php
+        while ($i < $cantidadProductos) {
+
+        ?>
+            <div>
+                <?php echo $arrayProductos[$i]->getNombre() ?>
+            </div>
+        <?php
+            $i++;
+        }
+        ?>
         </div>
-    <?php
-        $i++;
-    }
-    ?>
+    </div>
 </div>
+
 
 <?php
 include_once("Common/Footer.php");

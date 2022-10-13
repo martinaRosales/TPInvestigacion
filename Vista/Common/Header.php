@@ -24,23 +24,24 @@ include_once("/xampp/htdocs/TPInvestigacion/configuracion.php"); ?>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="/TPInvestigacion/Vista/Assets/css/Estilos.css">
 
-
+    <link rel="shortcut icon" href="../Assets/Img/logoBesto.png" type="image/x-icon">
 </head>
 
-<body>
+<body background="../Assets/Img/fondo.png">
+
     <header id="navbar ">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid" id="cabecera">
-                <a class="navbar-brand text-light fs-5" href="#">Besto 3D</a>
+                <a class="navbar-brand text-light fs-5" href="/TPInvestigacion/Vista/Index.php"><img src="/TPInvestigacion/Vista/Assets/Img/logo simple.png" width="70px" class="mb-1"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse" id="navbarHeader">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active text-light fs-5" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link active text-light fs-5" aria-current="page" href="/TPInvestigacion/Vista/Index.php">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light fs-5" href="#">Carrito</a>
@@ -50,9 +51,9 @@ include_once("/xampp/htdocs/TPInvestigacion/configuracion.php"); ?>
                                 Productos
                             </a>
                             <ul class="dropdown-menu" id="dropdown">
-                                <li><a class="dropdown-item text-light" href="#">Impresiones 2D</a></li>
-                                <li><a class="dropdown-item text-light" href="#">Impresiones 3D</a></li>
-                                <li><a class="dropdown-item text-light" href="#">Accesorios</a></li>
+                                <li><a class="dropdown-item text-light" href="/TPInvestigacion/Vista/Productos2D.php">Impresiones 2D</a></li>
+                                <li><a class="dropdown-item text-light" href="/TPInvestigacion/Vista/Productos3D.php">Impresiones 3D</a></li>
+                                <li><a class="dropdown-item text-light" href="/TPInvestigacion/Vista/Accesorios.php">Accesorios</a></li>
                             </ul>
                         </li>
                     </ul>
