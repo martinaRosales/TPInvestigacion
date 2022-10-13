@@ -1,27 +1,27 @@
 header {
-    background-color: #E91E63;   
+  background-color: #e91e63;
 }
 body {
-background-image: url("../Img/fondo.png");
-background-size: contain;
+  background-image: url("../Img/fondo.png");
+  width: 100vw;
+  background-size: cover;
 }
-footer{
-    background-color: #E91E63;  
-    position: fixed;
-    left: 0px;
-    bottom:0px;
-    width: 100%;
-    height: fit-content;
+footer {
+  background-color: #e91e63;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: fit-content;
 }
-#dropdown{
-    background-color: #E91E63;
+#dropdown {
+  background-color: #e91e63;
 }
 
 #cuerpo {
-    background-color: #ffcadb;
+  background-color: #ffcadb;
 }
 
-#navbarHeader a:hover{
-    background-color: #e33670;
+#navbarHeader a:hover {
+  background-color: #e33670;
 }
-
