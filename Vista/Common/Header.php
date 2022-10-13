@@ -26,7 +26,7 @@ include_once("/xampp/htdocs/TPInvestigacion/configuracion.php"); ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/TPInvestigacion/Vista/Assets/css/Estilos.css">
 
-    <link rel="shortcut icon" href="../Assets/Img/logoBesto.png" type="image/x-icon">
+    <link rel="icon" href="../Assets/Img/logoBesto.svg">
 </head>
 
 <body background="../Assets/Img/fondo.png">
