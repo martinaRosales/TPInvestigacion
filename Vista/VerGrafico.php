@@ -19,8 +19,6 @@ foreach ($result as $row) {
 $data = json_encode(array_values($data));
 
 ?>
-
-<div>Aca se puede ver el grafico y descargarlo</div>
 <!-- Styles -->
 <style>
     #chartdiv {
@@ -33,6 +31,7 @@ $data = json_encode(array_values($data));
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/plugins/exporting.js"></script>
 
 <!-- Chart code -->
 <script>
@@ -40,7 +39,7 @@ $data = json_encode(array_values($data));
 
         // Create root element
         // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-        var root = am5.Root.new("chartdiv");
+        var root = am5.Root.new("chartdiv_1");
 
 
         // Set themes
@@ -124,6 +123,13 @@ $data = json_encode(array_values($data));
         // Set data
         var data = <?php echo $data; ?>;
 
+        var exporting = am5plugins_exporting.Exporting.new(root, {
+        menu: am5plugins_exporting.ExportingMenu.new(root, {}),
+        htmlOptions: {
+        disabled: true
+         }
+        });
+
         xAxis.data.setAll(data);
         series.data.setAll(data);
 
@@ -134,16 +140,19 @@ $data = json_encode(array_values($data));
         chart.appear(1000, 100);
 
     }); // end am5.ready()
+
+    
 </script>
 
 <!-- HTML -->
-<form action="AccionDescargarPDF.php">
-    <div id="chartdiv"></div>
+<div class="container-fluid">
+<div class="container col-md-12" style="margin:30px;background-color: lightblue;">
+<form method="POST" action="AccionDescargarPDF.php">
+    <input type="hidden" name="grafico_1" id="gafico_1">
+    <div id="chartdiv_1"></div>
     <div>
         <button class="btn btn-primary" type="submit">Descargar PDF</button>
     </div>
 </form>
-
-<?php
-include('Common/Footer.php');
-?>
+</div>
+</div>

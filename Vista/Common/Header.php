@@ -34,6 +34,9 @@ include_once("/xampp/htdocs/TPInvestigacion/configuracion.php"); ?>
     <script src="https://cdn.amcharts.com/lib/5/locales/de_DE.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/germanyLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/fonts/notosans-sc.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/plugins/exporting.js"></script>
+    <script src="../Assets/js/html2canvas.min.js"></script>
+
 
 </head>
 
