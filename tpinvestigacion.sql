@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-10-2022 a las 16:13:05
+-- Tiempo de generación: 13-10-2022 a las 21:50:09
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -29,12 +29,30 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `producto` (
   `idProducto` int(5) NOT NULL,
-  `Nombre` varchar(50) DEFAULT NULL,
-  `Descripcion` varchar(200) DEFAULT NULL,
-  `Precio` float(7,2) DEFAULT NULL,
-  `Stock` int(5) DEFAULT NULL,
-  `Tipo` varchar(10) DEFAULT NULL
+  `nombre` varchar(50) DEFAULT NULL,
+  `descripcion` varchar(200) DEFAULT NULL,
+  `precio` float(7,2) DEFAULT NULL,
+  `stock` int(5) DEFAULT NULL,
+  `tipo` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`idProducto`, `nombre`, `descripcion`, `precio`, `stock`, `tipo`) VALUES
+(1, 'Figura Pikachu', 'Figura 3D de Pokemon, 10cm de alto', 1000.00, 20, '3D'),
+(2, 'Figura Raichu', 'Figura 3D de Pokemon, 10cm de alto', 1000.00, 10, '3D'),
+(3, 'Figura Pichu', 'Figura 3D de Pokemon, 10cm de alto', 1000.00, 25, '3D'),
+(4, 'Figura Luffy', 'Figura 3D de One Piece, desde 15cm de alto', 2500.00, 5, '3D'),
+(5, 'Figura Zoro', 'Figura 3D de One Piece, desde 15cm de alto', 2500.00, 3, '3D'),
+(6, 'Figura Chopper', 'Figura 3D de One Piece, desde 15cm de alto', 2500.00, 1, '3D'),
+(7, 'Llavero', 'Llavero de acrilico, diseños varios', 300.00, 100, 'Accesorio'),
+(8, 'Stickers x 3', 'Pack de 3 stickers, diseños varios', 100.00, 1000, '2D'),
+(9, 'Foto', 'Foto 10x15cm y apoya fotos, diseños varios.', 200.00, 100, '2D'),
+(10, 'Cuernitos', 'Hebillas para cosplay.', 800.00, 5, 'Accesorio'),
+(11, 'Hebillas Anya', 'Hebillas para cosplay.', 1000.00, 5, 'Accesorio'),
+(12, 'Hebillas Evangelion', 'Hebillas para cosplay.', 1200.00, 5, 'Accesorio');
 
 -- --------------------------------------------------------
 
@@ -59,6 +77,27 @@ CREATE TABLE `venta` (
   `fecha` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `venta`
+--
+
+INSERT INTO `venta` (`idVenta`, `fecha`) VALUES
+(1, '2022-10-13'),
+(2, '2022-10-12'),
+(3, '2022-10-13'),
+(4, '2022-10-11'),
+(5, '2022-10-13'),
+(6, '2022-10-13'),
+(7, '2022-09-20'),
+(8, '2022-09-20'),
+(9, '2022-09-22'),
+(10, '2022-09-21'),
+(11, '2022-08-05'),
+(12, '2022-08-22'),
+(13, '2022-07-20'),
+(14, '2022-07-10'),
+(15, '2022-09-21');
+
 -- --------------------------------------------------------
 
 --
@@ -66,9 +105,37 @@ CREATE TABLE `venta` (
 --
 
 CREATE TABLE `ventaproducto` (
+  `idVentaProducto` int(10) NOT NULL,
   `idVenta` int(5) NOT NULL,
-  `idProducto` int(5) NOT NULL
+  `idProducto` int(5) NOT NULL,
+  `cantidad` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `ventaproducto`
+--
+
+INSERT INTO `ventaproducto` (`idVentaProducto`, `idVenta`, `idProducto`, `cantidad`) VALUES
+(1, 1, 1, 3),
+(2, 1, 8, 1),
+(3, 2, 7, 11),
+(4, 3, 2, 1),
+(5, 3, 12, 2),
+(6, 4, 1, 8),
+(7, 5, 7, 3),
+(8, 6, 6, 2),
+(9, 7, 2, 2),
+(10, 8, 11, 1),
+(11, 8, 1, 8),
+(12, 8, 3, 2),
+(13, 9, 1, 1),
+(14, 9, 5, 1),
+(15, 10, 2, 1),
+(16, 11, 8, 10),
+(17, 12, 1, 5),
+(18, 13, 3, 5),
+(19, 14, 2, 5),
+(20, 15, 10, 5);
 
 --
 -- Índices para tablas volcadas
@@ -96,8 +163,7 @@ ALTER TABLE `venta`
 -- Indices de la tabla `ventaproducto`
 --
 ALTER TABLE `ventaproducto`
-  ADD PRIMARY KEY (`idVenta`,`idProducto`),
-  ADD KEY `idProducto` (`idProducto`);
+  ADD PRIMARY KEY (`idVentaProducto`);
 
 --
 -- Restricciones para tablas volcadas
