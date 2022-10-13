@@ -137,7 +137,13 @@ $data = json_encode(array_values($data));
 </script>
 
 <!-- HTML -->
-<div id="chartdiv"></div>
+<form action="AccionDescargarPDF.php">
+    <div id="chartdiv"></div>
+    <div>
+        <button class="btn btn-primary" type="submit">Descargar PDF</button>
+    </div>
+</form>
+
 <?php
 include('Common/Footer.php');
 ?>
