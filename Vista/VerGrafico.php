@@ -2,6 +2,7 @@
 include('Common/Header.php');
 
 ?>
+<div class="container col-md-5 mt-3 ms-3">
 <form action="" id="verGraficos">
     <div class="container">
         <h2 class="text-light">Ganancias Mensuales</h2>

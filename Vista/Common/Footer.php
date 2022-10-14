@@ -1,5 +1,5 @@
 
-<footer class="page-footer font-small position-absolute bottom-0">
+<footer class="page-footer font-small position-relative bottom-0">
   <div class="container row mt-2">
     <div class="text-light col-9 ms-2 mb-2" id="infoContacto">
       CONTACTO <br>

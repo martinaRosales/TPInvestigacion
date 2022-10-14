@@ -175,7 +175,7 @@ class Producto{
         $tipo = $this->getTipo();
         $imagen = $this->getImagen();
         //Creo la consulta 
-        $sql = "INSERT INTO producto (idProducto, nombre, descripcion, precio, stock, tipo) VALUES ('{$idProducto}', '{$nombre}', '{$descripcion}' , '{$precio}' , '{$stock}', , '{$tipo}', '{$imagen}')";
+        $sql = "INSERT INTO producto (idProducto, nombre, descripcion, precio, stock, tipo, imagen) VALUES ('{$idProducto}', '{$nombre}', '{$descripcion}' , '{$precio}' , '{$stock}', , '{$tipo}', '{$imagen}')";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;
