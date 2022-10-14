@@ -10,7 +10,7 @@ for ($i = 1; $i <= 12; $i++) {
     //$i es el numero del mes
     $dato = array(
         'MES' => date("F", mktime(0, 0, 0, $i, 12)),
-        'GANANCIA' => $arrayGanancias[$i-1]
+        'GANANCIA' => $arrayGanancias[$i - 1]
     );
     $data[] = $dato;
 }
@@ -20,7 +20,7 @@ $data = json_encode(array_values($data));
 ?>
 
 <div id="VentasMensuales" class="container-m d-none">
-    
+
 
     <!-- Resources -->
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
@@ -117,18 +117,16 @@ $data = json_encode(array_values($data));
 
             // Set data
             var data = <?php echo $data; ?>;
+            xAxis.data.setAll(data);
+            series.data.setAll(data);
 
+            //exporting
             var exporting = am5plugins_exporting.Exporting.new(root, {
                 menu: am5plugins_exporting.ExportingMenu.new(root, {}),
                 htmlOptions: {
                     disabled: true
                 }
-            });
-
-            xAxis.data.setAll(data);
-            series.data.setAll(data);
-
-
+            }); 
             // Make stuff animate on load
             // https://www.amcharts.com/docs/v5/concepts/animations/
             series.appear(1000);
@@ -139,10 +137,8 @@ $data = json_encode(array_values($data));
 
     <!-- HTML -->
     <div class="container-fluid">
-        <div class="container col-md-12" style="margin:30px;background-color: lightblue;">
-            <form method="POST" action="AccionDescargarPDF.php">
-                <input type="hidden" name="grafico_1" id="gafico_1">
-                <div id="chartdiv_1" class="contenedorGrafico"></div>
-            </form>
-        </div>
+        < <input type="hidden" name="grafico_1" id="gafico_1">
+            <div id="chartdiv_1" class="contenedorGrafico"></div>
+
     </div>
+</div>
