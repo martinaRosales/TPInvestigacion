@@ -1,0 +1,3 @@
+function mostrarGrafico(idGrafico){
+    
+}
