@@ -137,7 +137,7 @@ $data = json_encode(array_values($data));
 
     <!-- HTML -->
     <div class="container-fluid">
-        < <input type="hidden" name="grafico_1" id="gafico_1">
+            <input type="hidden" name="grafico_1" id="gafico_1">
             <div id="chartdiv_1" class="contenedorGrafico"></div>
 
     </div>

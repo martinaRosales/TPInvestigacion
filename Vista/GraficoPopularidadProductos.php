@@ -62,4 +62,9 @@ $data = json_encode(array_values($data));
 </script>
 
 <!-- HTML -->
-<div id="PopularidadProductos" class="contenedorGrafico d-none"></div>
+
+<div class="container-fluid">
+    <input type="hidden" name="grafico_1" id="gafico_1">
+    <div id="PopularidadProductos" class="contenedorGrafico"></div>
+
+</div>
