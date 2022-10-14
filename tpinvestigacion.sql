@@ -33,26 +33,27 @@ CREATE TABLE `producto` (
   `descripcion` varchar(200) DEFAULT NULL,
   `precio` float(7,2) DEFAULT NULL,
   `stock` int(5) DEFAULT NULL,
-  `tipo` varchar(10) DEFAULT NULL
+  `tipo` varchar(10) DEFAULT NULL,
+  `imagen` varchar(520) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`idProducto`, `nombre`, `descripcion`, `precio`, `stock`, `tipo`) VALUES
-(1, 'Figura Pikachu', 'Figura 3D de Pokemon, 10cm de alto', 1000.00, 20, '3D'),
-(2, 'Figura Raichu', 'Figura 3D de Pokemon, 10cm de alto', 1000.00, 10, '3D'),
-(3, 'Figura Pichu', 'Figura 3D de Pokemon, 10cm de alto', 1000.00, 25, '3D'),
-(4, 'Figura Luffy', 'Figura 3D de One Piece, desde 15cm de alto', 2500.00, 5, '3D'),
-(5, 'Figura Zoro', 'Figura 3D de One Piece, desde 15cm de alto', 2500.00, 3, '3D'),
-(6, 'Figura Chopper', 'Figura 3D de One Piece, desde 15cm de alto', 2500.00, 1, '3D'),
-(7, 'Llavero', 'Llavero de acrilico, diseños varios', 300.00, 100, 'Accesorio'),
-(8, 'Stickers x 3', 'Pack de 3 stickers, diseños varios', 100.00, 1000, '2D'),
-(9, 'Foto', 'Foto 10x15cm y apoya fotos, diseños varios.', 200.00, 100, '2D'),
-(10, 'Cuernitos', 'Hebillas para cosplay.', 800.00, 5, 'Accesorio'),
-(11, 'Hebillas Anya', 'Hebillas para cosplay.', 1000.00, 5, 'Accesorio'),
-(12, 'Hebillas Evangelion', 'Hebillas para cosplay.', 1200.00, 5, 'Accesorio');
+INSERT INTO `producto` (`idProducto`, `nombre`, `descripcion`, `precio`, `stock`, `tipo`, `imagen`) VALUES
+(1, 'Figura Pikachu', 'Figura 3D de Pokemon, 10cm de alto', 1000.00, 20, '3D', '/TPInvestigacion/Vista/Assets/Img/P3D/Chopper.jpeg'),
+(2, 'Figura Raichu', 'Figura 3D de Pokemon, 10cm de alto', 1000.00, 10, '3D','/TPInvestigacion/Vista/Assets/Img/P3D/Chopper.jpeg'),
+(3, 'Figura Pichu', 'Figura 3D de Pokemon, 10cm de alto', 1000.00, 25, '3D','/TPInvestigacion/Vista/Assets/Img/P3D/Chopper.jpeg'),
+(4, 'Figura Luffy', 'Figura 3D de One Piece, desde 15cm de alto', 2500.00, 5, '3D', '/TPInvestigacion/Vista/Assets/Img/P3D/Chopper.jpeg'),
+(5, 'Figura Zoro', 'Figura 3D de One Piece, desde 15cm de alto', 2500.00, 3, '3D', '/TPInvestigacion/Vista/Assets/Img/P3D/Chopper.jpeg'),
+(6, 'Figura Chopper', 'Figura 3D de One Piece, desde 15cm de alto', 2500.00, 1, '3D', '/TPInvestigacion/Vista/Assets/Img/P3D/Chopper.jpeg'),
+(7, 'Llavero', 'Llavero de acrilico, diseños varios', 300.00, 100, 'Accesorio','/TPInvestigacion/Vista/Assets/Img/Accesorios/Llaveros.jpeg'),
+(8, 'Stickers x 3', 'Pack de 3 stickers, diseños varios', 100.00, 1000, '2D', '/TPInvestigacion/Vista/Assets/Img/P2D/Stickers.jpeg'),
+(9, 'Foto', 'Foto 10x15cm y apoya fotos, diseños varios.', 200.00, 100, '2D', '/TPInvestigacion/Vista/Assets/Img/P2D/Tarjetas Genshin.jpeg'),
+(10, 'Aritos', 'Aritos impresos 3D y pintados a mano', 300.00, 5, 'Accesorio','/TPInvestigacion/Vista/Assets/Img/Accesorios/Aritos Hito Hito no Mi.jpeg'),
+(11, 'Pines', 'Pines para mochila, diseños varios', 300.00, 5, 'Accesorio','/TPInvestigacion/Vista/Assets/Img/Accesorios/Pins.jpeg');
+
 
 -- --------------------------------------------------------
 
