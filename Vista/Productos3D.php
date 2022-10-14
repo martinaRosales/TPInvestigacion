@@ -10,7 +10,7 @@ if ($arrayProductos != null) {
 }
 $i = 0;
 ?>
-<div class="container col-md-5 " style="margin:30px">
+<div class="container col-md-5 mt-3 ms-3">
     <div>
         <div>
         <?php
