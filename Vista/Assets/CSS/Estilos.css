@@ -5,14 +5,16 @@ body {
   background-image: url("../Img/fondo.png");
   width: 100vw;
   background-size: cover;
+  margin: 0;
+  margin-bottom: 40px;
 }
 footer {
-  background-color: #e91e63;
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: fit-content;
+  background-color: #e91e63; 
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
 }
 #dropdown {
   background-color: #e91e63;
@@ -25,3 +27,4 @@ footer {
 #navbarHeader a:hover {
   background-color: #e33670;
 }
+

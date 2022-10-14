@@ -26,7 +26,7 @@ include_once("/xampp/htdocs/TPInvestigacion/configuracion.php"); ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/TPInvestigacion/Vista/Assets/css/Estilos.css">
 
-    <link rel="icon" href="../Assets/Img/logoBesto.svg">
+    <link rel="icon" href="/TPInvestigacion/Vista/Assets/Img/logoBesto.svg" id="logoPagina">
 
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
@@ -55,7 +55,7 @@ include_once("/xampp/htdocs/TPInvestigacion/configuracion.php"); ?>
                             <a class="nav-link active text-light fs-5" aria-current="page" href="/TPInvestigacion/Vista/Index.php">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light fs-5" href="#">Carrito</a>
+                            <a class="nav-link text-light fs-5" href="/TPInvestigacion/Vista/VerGrafico.php">Ver gr&aacute;ficos</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
