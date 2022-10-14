@@ -181,4 +181,29 @@ class C_VentaProducto
         //print_r($arrayGanancias);
         return $arrayGanancias;
     }
+
+    /**
+     * Recibe el ID de un producto y retorna cuantas veces se vendio
+     */
+    public function cantidadVendidaTotal($idProducto){
+        $array = $this->buscar(NULL);
+        $ventasConProducto = $this->buscar(['idProducto'=>$idProducto]);
+        //print_r($ventasConProducto);
+        $cantidadVendida = 0;
+        foreach ((array)$ventasConProducto as $registro){
+            $cantidadVendida += $registro->getCantidad();
+        }
+        return $cantidadVendida;
+    }
+
+    public function cantProductosVendidos(){
+        $objC_Producto = new C_Producto();
+        $arrayProductos = $objC_Producto->buscar(NULL);
+        $arrayCantProductos = [];
+        foreach($arrayProductos as $producto){
+            //$producto = $registro->getObjProducto();
+            $arrayCantProductos[] = ['nombre'=>$producto->getNombre(), 'cantidad'=>$this->cantidadVendidaTotal($producto->getIdProducto())];
+        }
+        return $arrayCantProductos;
+    }
 }

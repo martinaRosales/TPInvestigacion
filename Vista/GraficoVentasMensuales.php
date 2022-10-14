@@ -19,7 +19,7 @@ $data = json_encode(array_values($data));
 
 ?>
 
-<div id="VentasMensuales" class="container-fluid d-none">
+<div id="VentasMensuales" class="container-m d-none">
     
 
     <!-- Resources -->
