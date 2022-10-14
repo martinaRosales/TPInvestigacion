@@ -26,3 +26,9 @@ footer {
   background-color: #e33670;
 }
 
+/*ESTILOS PARA LOS GRAFICOS*/
+.contenedorGrafico {
+  width: 100%;
+  height: 500px;
+  background-color: rgba(233, 30, 99, 0.3);
+}

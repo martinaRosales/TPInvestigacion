@@ -1,5 +1,5 @@
 <?php
-include 'conector/BaseDeDatos.php';
+include_once 'conector/BaseDeDatos.php';
 class VentaProducto
 {
     private $idVentaProducto;
