@@ -10,18 +10,32 @@ if ($arrayProductos != null) {
 $i = 0;
 ?>
 <div>
-    <div id="cuerpo" class="">
+    <div>
         <div>
         <?php
         while ($i < $cantidadProductos) {
         ?>
             <div>
-                <?php echo $arrayProductos[$i]->getNombre() ?>
+                
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $arrayProductos[$i]->getNombre() ?></h5>
+                                <p class="card-text"><b>Descripci&oacute;n:</b> <?php echo $arrayProductos[$i]->getDescripcion() ?> <br>
+                                                     <b>Precio:</b>  $<?php echo $arrayProductos[$i]->getPrecio() ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        <?php
-            $i++;
-        }
-        ?>
+            <?php
+                $i++;
+            }
+            ?>
         </div>
     </div>
 </div>
