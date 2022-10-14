@@ -21,7 +21,8 @@ class C_Producto
                 $param['descripcion'],
                 $param['precio'],
                 $param['tipo'],
-                $param['stock']
+                $param['stock'],
+                $param['imagen']
             );
         }
         return $obj;
@@ -38,7 +39,7 @@ class C_Producto
         $obj = null;
         if (isset($param['id'])) {
             $obj = new Producto();
-            $obj->cargar($param['idProducto'], null, null, null, null, null);
+            $obj->cargar($param['idProducto'], null, null, null, null, null,null);
         }
         return $obj;
     }
@@ -125,6 +126,8 @@ class C_Producto
                     $where.=" and tipo =".$param['tipo'];
             if  (isset($param['stock']))
                     $where.=" and stock =".$param['stock'];
+            if (isset($param['imagen']))
+                    $where-=" and imagen =".$param['imagen'];
         }
         $obj = new Producto();
         $arreglo =  $obj->listar($where);  

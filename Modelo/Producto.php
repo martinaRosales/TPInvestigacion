@@ -8,6 +8,7 @@ class Producto{
     private $precio;
     private $stock;
     private $tipo;
+    private $imagen;
     private $mensaje;
 
     public function __construct()
@@ -18,15 +19,17 @@ class Producto{
         $this->precio = "";
         $this->stock = "";
         $this->tipo = "";
+        $this->imagen = "";
     }
 
-    public function cargar($idProducto, $nombre, $descripcion, $precio, $stock, $tipo){
+    public function cargar($idProducto, $nombre, $descripcion, $precio, $stock, $tipo, $imagen){
         $this->setIdProducto($idProducto);
         $this->setNombre($nombre);
         $this->setDescripcion($descripcion);
         $this->setPrecio($precio);
         $this->setStock($stock);
         $this->setTipo($tipo);
+        $this->setImagen($imagen);
     }
 
     public function getIdProducto(){
@@ -77,6 +80,14 @@ class Producto{
         $this->tipo = $tipo;
     }
 
+    public function getImagen(){
+        return $this->imagen;
+    }
+
+    public function setImagen($imagen){
+        $this->imagen = $imagen;
+    }
+
     public function getMensaje(){
         return $this->mensaje;
     }
@@ -92,7 +103,8 @@ class Producto{
             "\nDescripcion: " . $this->getDescripcion() . 
             "\Precio: " . $this->getPrecio() . 
             "\nStock: " . $this->getStock() . 
-            "\Tipo: " . $this->getTipo();
+            "\Tipo: " . $this->getTipo().
+            "\Imagen: ". $this->getImagen();
     }
 
     //FUNCIONES BD
@@ -111,6 +123,7 @@ class Producto{
                     $this->setPrecio($row2['precio']);
                     $this->setStock($row2['stock']);
                     $this->setTipo($row2['tipo']);
+                    $this->setImagen($row2['imagen']);
                     $resp = true;
                 }
             } else {
@@ -160,8 +173,9 @@ class Producto{
         $precio = $this->getPrecio();
         $stock = $this->getStock();
         $tipo = $this->getTipo();
+        $imagen = $this->getImagen();
         //Creo la consulta 
-        $sql = "INSERT INTO producto (idProducto, nombre, descripcion, precio, stock, tipo) VALUES ('{$idProducto}', '{$nombre}', '{$descripcion}' , '{$precio}' , '{$stock}', , '{$tipo}')";
+        $sql = "INSERT INTO producto (idProducto, nombre, descripcion, precio, stock, tipo) VALUES ('{$idProducto}', '{$nombre}', '{$descripcion}' , '{$precio}' , '{$stock}', , '{$tipo}', '{$imagen}')";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;
@@ -185,7 +199,8 @@ class Producto{
         $precio = $this->getPrecio();
         $stock = $this->getStock();
         $tipo = $this->getTipo();
-        $sql = "UPDATE producto SET nombre = '{$nombre}', descripcion = '{$descripcion}', precio = '{$precio} , stock = '{$stock} , tipo = '{$tipo}' WHERE idProducto = '{$idProducto}'";
+        $imagen = $this->getImagen();
+        $sql = "UPDATE producto SET nombre = '{$nombre}', descripcion = '{$descripcion}', precio = '{$precio} , stock = '{$stock} , tipo = '{$tipo}', imagen = '{$imagen}' WHERE idProducto = '{$idProducto}'";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;
