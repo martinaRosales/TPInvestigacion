@@ -52,8 +52,8 @@ INSERT INTO `producto` (`idProducto`, `nombre`, `descripcion`, `precio`, `stock`
 (8, 'Stickers x 3', 'Pack de 3 stickers, diseños varios', 100.00, 1000, '2D', '/TPInvestigacion/Vista/Assets/Img/P2D/Stickers.jpeg'),
 (9, 'Foto', 'Foto 10x15cm y apoya fotos, diseños varios.', 200.00, 100, '2D', '/TPInvestigacion/Vista/Assets/Img/P2D/Tarjetas Genshin.jpeg'),
 (10, 'Aritos', 'Aritos impresos 3D y pintados a mano', 300.00, 5, 'Accesorio','/TPInvestigacion/Vista/Assets/Img/Accesorios/Aritos Hito Hito no Mi.jpeg'),
-(11, 'Pines', 'Pines para mochila, diseños varios', 300.00, 5, 'Accesorio','/TPInvestigacion/Vista/Assets/Img/Accesorios/Pins.jpeg');
-
+(11, 'Pines', 'Pines para mochila, diseños varios', 300.00, 5, 'Accesorio','/TPInvestigacion/Vista/Assets/Img/Accesorios/Pins.jpeg'),
+(12, 'Hebillas Evangelion', 'Hebillas para cosplay.', 1200.00, 5, 'Accesorio',NULL);
 
 -- --------------------------------------------------------
 
