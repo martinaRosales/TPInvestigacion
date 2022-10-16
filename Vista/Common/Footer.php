@@ -1,3 +1,4 @@
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.1/dist/html2canvas.min.js"></script>
 
 <footer class="page-footer font-small position-relative bottom-0">
   <div class="container row mt-2">
@@ -12,5 +13,6 @@
     </div>
   </div>
 </footer>
+
 </body>
 </html>
