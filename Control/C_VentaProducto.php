@@ -149,7 +149,7 @@ class C_VentaProducto
                 //Creo instancia de C_Producto para obtener el precio
                 $objC_Producto = new C_Producto();
                 $objProducto = $objC_Producto->buscar(['idProducto' => $registro->getObjProducto()->getIdProducto()]);
-                echo $registro;
+            
                 //Sumo al total de ganancias el precio del producto x cantidad vendida
                 $totalGanancia += $registro->getCantidad() * $objProducto[0]->getPrecio();
             }
