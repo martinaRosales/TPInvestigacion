@@ -123,6 +123,7 @@ class Producto{
                     $this->setPrecio($row2['precio']);
                     $this->setStock($row2['stock']);
                     $this->setTipo($row2['tipo']);
+                    //print_r($row2); TRAE TODO EL REGISTRO MENOS IMAGEN, POR QUE??
                     $this->setImagen($row2['imagen']);
                     $resp = true;
                 }
