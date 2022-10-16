@@ -134,4 +134,18 @@ class C_Producto
         
         return $arreglo;
     }
+
+    /**
+     * permite buscar un objeto
+     * @return array
+     */
+    public function productos_disponibles(){
+        $where = ' stock > 0';
+        $obj = new Producto();
+        $arreglo =  $obj->listar($where);  
+        
+        return $arreglo;
+    }
 }
+
+
