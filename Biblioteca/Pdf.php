@@ -66,7 +66,7 @@ class Pdf extends TCPDF
 		return '<p class="first">' . $text . '</p>';
 	}
 
-	public function generar_y_descargar_pdf_informe_registros($nombre_archivo_sin_extension, $subject, $message, $page_orientation = 'P', $output_type = 'I', $image_width = 32, $image_height = 32)
+	public function generar_y_descargar_pdf_informe($nombre_archivo_sin_extension, $subject, $message, $page_orientation = 'P', $output_type = 'I', $image_width = 32, $image_height = 32)
 	{
 		$pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
 		$pdf->SetPrintHeader(false);

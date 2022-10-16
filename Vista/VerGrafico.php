@@ -3,7 +3,7 @@ include('Common/Header.php');
 
 ?>
 <div class="container col-md-12 mt-3 ms-3">
-<p><a href="generar_pdf_productos_disponibles" class="btn btn-primary">Descargar PDF de productos disponibles</a></p>
+<p><a href="generar_pdf_productos_disponibles.php" class="btn btn-primary">Descargar PDF de productos disponibles</a></p>
 <form action="" id="verGraficos">
     <div class="container">
         <h2 class="text-light">Ganancias Mensuales</h2>
