@@ -18,6 +18,15 @@ for ($i = 1; $i <= 12; $i++) {
 $data = json_encode(array_values($data));
 
 ?>
+
+<div id="VentasMensuales" class="container-m d-none">
+
+
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
     <!-- Chart code -->
     <script>
         am5.ready(function() {
@@ -123,16 +132,13 @@ $data = json_encode(array_values($data));
             series.appear(1000);
             chart.appear(1000, 100);
 
-       
-
         }); // end am5.ready()
-
-  // WAIT UNTIL CHART HAS BEEN RENDERED
-
     </script>
 
     <!-- HTML -->
-    <input type="hidden" name="grafico_1" id="grafico_1">
-    <div id="chartdiv_1" class="contenedorGrafico"></div>
+    <div class="container-fluid">
+            <input type="hidden" name="grafico_1" id="gafico_1">
+            <div id="chartdiv_1" class="contenedorGrafico"></div>
 
-
+    </div>
+</div>
