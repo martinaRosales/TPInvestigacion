@@ -1,4 +1,11 @@
 <?php 
+$encabezado = '<td width="20" ><b>#</b></td>
+                <td width="330"><b>Nombre</b></td>
+                <td width="80"><b>Cantidad Disponible</b></td>
+                <td width="70"><b>Descripcion</b></td>
+                 <td width="70"><b>Precio</b></td>
+                ';                
+                
 $vista = '';
 $vista = '<!DOCTYPE html>
 <html lang="es">
@@ -32,7 +39,9 @@ $vista = '<!DOCTYPE html>
     				   </table>    					  					
     				</div>   
     		   </div>
-        </div>
+
+
+        </div> 
     </body>
 </html>';
 include('../Biblioteca/Pdf.php');
