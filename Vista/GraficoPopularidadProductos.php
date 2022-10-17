@@ -36,7 +36,8 @@ $data = json_encode(array_values($data));
         // Create chart
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
         var chart = root.container.children.push(am5percent.PieChart.new(root, {
-            layout: root.verticalLayout
+            
+            layout: root.horizontalLayout
         }));
 
 
@@ -53,6 +54,25 @@ $data = json_encode(array_values($data));
         var data = <?php echo $data; ?>;
         series.data.setAll(data);
 
+
+        series.labels.template.set("visible", false);
+        series.ticks.template.set("visible", false);
+        var legend = chart.children.push(am5.Legend.new(root, {
+            centerY: am5.percent(50),
+            y: am5.percent(50),
+            layout: root.verticalLayout
+        }));
+        // set value labels align to right
+        legend.valueLabels.template.setAll({
+            textAlign: "left"
+        })
+        // set width and max width of labels
+        legend.labels.template.setAll({
+            maxWidth: 140,
+            width: 140,
+            oversizedBehavior: "wrap"
+        });
+        legend.data.setAll(series.dataItems);
 
         // Play initial series animation
         // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
