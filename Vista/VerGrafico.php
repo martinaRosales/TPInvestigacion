@@ -21,7 +21,7 @@ $result = $obj_controlador->buscar(null);
         <h5 class="modal-title" id="exampleModalLabel">Generar PDF por Venta</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form id="from_pdf" name="from_pdf" method="post" action="generar_pdf_por_venta.php">
+      <form  target="_blank" id="from_pdf" name="from_pdf" method="post" action="generar_pdf_por_venta.php">
  
       <div class="modal-body">
      
