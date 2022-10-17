@@ -1,5 +1,6 @@
 <?php
 include_once 'conector/BaseDeDatos.php';
+include_once 'Producto.php';
 class VentaProducto
 {
     private $idVentaProducto;
@@ -208,5 +209,31 @@ class VentaProducto
             $this->setMensaje($base->getError());
         }
         return $rta;
+    }
+
+    public function obtener_productos_por_venta($idVenta)
+    {
+        $array = null;
+        $base = new BaseDatos();
+        $sql =  'SELECT producto.* FROM ventaproducto INNER JOIN producto ON producto.idProducto = ventaproducto.idProducto';
+        if ($idVenta != '') {
+            $sql .= ' WHERE ventaproducto.idVenta =' . $idVenta;
+        }
+        if ($base->Iniciar()) {
+            if ($base->Ejecutar($sql)) {
+                $array = array();
+                while ($row2 = $base->Registro()) {
+                    $objProducto = new Producto();
+                    $objProducto->buscar($row2['idProducto']);
+                    $array[] = $objProducto;
+                }
+            } else {
+                $this->setMensaje($base->getError());
+            }
+        } else {
+            $this->setMensaje($base->getError());
+        }
+
+        return $array;
     }
 }
