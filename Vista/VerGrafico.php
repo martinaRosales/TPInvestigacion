@@ -6,7 +6,7 @@ include('Common/Header.php');
     <div class=" row bg-dark justify-content-center">
         <p><a target="_blank" href="generar_pdf_productos_disponibles.php" class="btn btn-primary">Descargar PDF de productos disponibles</a></p>
 
-        <div class="container col">
+        <div class="container col-4">
             <h2 class="text-light">Ganancias Mensuales</h2>
             <!-- <button class="btn btn-primary" onClick="mostrarGrafico('VentasMensuales');">Ver</button>
             <p></p> -->
@@ -18,6 +18,12 @@ include('Common/Header.php');
             <!-- <button class="btn btn-primary" onClick="mostrarGrafico('PopularidadProductos');">Ver</button>
             <p></p> -->
             <?php include_once('GraficoPopularidadProductos.php') ?>
+        </div>
+        <div class="container col-8">
+            <h2 class="text-light">Como nos conocieron</h2>
+            <!-- <button class="btn btn-primary" onClick="mostrarGrafico('PopularidadProductos');">Ver</button>
+            <p></p> -->
+            <?php include_once('GraficoSalchicha.php') ?>
         </div>
 
     </div>
