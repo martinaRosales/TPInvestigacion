@@ -37,7 +37,8 @@ $data = json_encode(array_values($data));
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
         var chart = root.container.children.push(am5percent.PieChart.new(root, {
             
-            layout: root.horizontalLayout
+            layout: root.horizontalLayout,
+            
         }));
 
 
