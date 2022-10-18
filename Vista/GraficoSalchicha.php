@@ -1,6 +1,6 @@
 <!-- Styles -->
 <style>
-#chartdiv {
+#graficoConocieron {
   width: 100%;
   height: 500px;
 }
@@ -17,7 +17,7 @@ am5.ready(function() {
 
 // Create root element
 // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-var root = am5.Root.new("chartdiv");
+var root = am5.Root.new("graficoConocieron");
 
 
 // Set themes
@@ -82,7 +82,7 @@ chart.appear(1000, 100);
 <div id="VentasMensuales" class="container-m">
 
     <input type="hidden" name="grafico_1" id="gafico_1">
-    <div id="chartdiv" class="contenedorGrafico"></div>
+    <div id="graficoConocieron" class="contenedorGrafico"></div>
 
 
 </div>
