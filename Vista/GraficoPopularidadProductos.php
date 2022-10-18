@@ -23,6 +23,8 @@ $data = json_encode(array_values($data));
 
         // Create root element
         // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+
+
         var root = am5.Root.new("PopularidadProductos");
 
 
@@ -35,15 +37,16 @@ $data = json_encode(array_values($data));
 
         // Create chart
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+
         var chart = root.container.children.push(am5percent.PieChart.new(root, {
-            
             layout: root.horizontalLayout,
-            
         }));
 
 
         // Create series
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+
+
         var series = chart.series.push(am5percent.PieSeries.new(root, {
             valueField: "CANTIDAD",
             categoryField: "NOMBRE"
@@ -52,6 +55,7 @@ $data = json_encode(array_values($data));
 
         // Set data
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+        
         var data = <?php echo $data; ?>;
         series.data.setAll(data);
 
