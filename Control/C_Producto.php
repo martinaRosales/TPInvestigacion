@@ -146,6 +146,20 @@ class C_Producto
         
         return $arreglo;
     }
+
+    public function obtener_productos_por_monto($min,$max){
+
+        if(!isset($min)){
+            return false;
+        }
+
+        if(!isset($max)){
+            return false;
+        }
+
+        $obj = new Producto();
+        return $obj->productos_por_montos($min,$max);
+    }
 }
 
 

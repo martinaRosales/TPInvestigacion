@@ -232,4 +232,29 @@ class Producto{
         return $rta;
     }
 
+    public function productos_por_montos($monto_min,$monto_max)
+    {
+        $array = null;
+        $base = new BaseDatos();
+        $sql =  "select * from producto";
+        if ($monto_min != '' && $monto_max !='') {
+            $sql = $sql . '  WHERE precio > '.$monto_min.' AND precio < '.$monto_max;
+        }
+        if ($base->Iniciar()) {
+            if ($base->Ejecutar($sql)) {
+                $array = array();
+                while ($row2 = $base->Registro()) {
+                    $objProducto = new Producto();
+                    $objProducto->buscar($row2['idProducto']);
+                    $array[] = $objProducto;
+                }
+            } else {
+                $this->setMensaje($base->getError());
+            }
+        } else {
+            $this->setMensaje($base->getError());
+        }
+        return $array;
+    }
+
 }
