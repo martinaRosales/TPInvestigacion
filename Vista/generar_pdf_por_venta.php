@@ -1,7 +1,12 @@
 <?php 
-include('../Control/C_Producto.php');
-$obj_controlador = new C_Producto();
-$data = $obj_controlador->productos_disponibles();
+include('../Control/C_VentaProducto.php');
+include('../Util/funciones.php');
+
+$datos = data_submitted();
+
+$obj_controlador = new C_VentaProducto();
+$data = $obj_controlador->listar_productos_por_venta($datos['venta']);
+
 $encabezado = '<td width="20" ><b>#</b></td>
                 <td width="80"><b>Nombre</b></td>
                 <td width="80"><b>Cantidad Disponible</b></td>
@@ -26,7 +31,7 @@ $vista = '<!DOCTYPE html>
     	<div style="width: 595px; font-size: 9px !important; font-family: "Open Sans", sans-serif;   ">
         
         <h1 style="font-size: 11px;"> 
-        		Productos |  <small> Disponibles </small> 
+        		Productos |  <small> De venta numero #'.$datos['venta'].' </small> 
         	   </h1>
            
     			<div>
@@ -34,8 +39,8 @@ $vista = '<!DOCTYPE html>
     				   <table>
     				   	<tr>
     				   	    <td style="color:white">     				   	   
-                               <img  width="90px"  height="70px" src="http://localhost/TPInvestigacion/Vista/Assets/Img/logo_simple_pdf.jpg" />    				   	   
-    				   	    </td>
+    				   	        <img  width="90px"  height="70px" src="http://localhost/TPInvestigacion/Vista/Assets/Img/logo_simple_pdf.jpg" />    				   	   
+    				   	     </td>
     				   	    <td style="color:white"> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </td>
     				   		<td style="text-align: right;color:#666;">'. date('d/m/Y').'</td>
     				   	</tr>
@@ -95,6 +100,6 @@ $vista .= '
 include('../Biblioteca/Pdf.php');
 $pdf = new Pdf();
 
-echo $pdf->generar_y_descargar_pdf_informe('productos_disponibles', array(), $vista, $page_orientation = 'P', $output_type = 'I', $image_width = 32, $image_height = 32)
+echo $pdf->generar_y_descargar_pdf_informe('productos_por_venta', array(), $vista, $page_orientation = 'P', $output_type = 'I', $image_width = 32, $image_height = 32)
 	
 ?>

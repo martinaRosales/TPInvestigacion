@@ -207,4 +207,14 @@ class C_VentaProducto
         }
         return $arrayCantProductos;
     }
+
+    public function listar_productos_por_venta($idVenta){
+
+        if(!isset($idVenta) && $idVenta == ''){
+            return false;
+        }
+        $objC_Producto = new VentaProducto();
+        return $objC_Producto->obtener_productos_por_venta($idVenta);
+    }
+
 }

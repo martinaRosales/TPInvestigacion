@@ -58,7 +58,7 @@ include_once("/xampp/htdocs/TPInvestigacion/configuracion.php"); ?>
                             <a class="nav-link active text-light fs-5" aria-current="page" href="/TPInvestigacion/Vista/Index.php">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light fs-5" href="/TPInvestigacion/Vista/VerGrafico.php">Ver gr&aacute;ficos</a>
+                            <a class="nav-link text-light fs-5" href="/TPInvestigacion/Vista/VerGrafico.php">Informes</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
