@@ -21,11 +21,6 @@ footer {
   background-color: #e91e63;
 }
 
-#Index{
-  position:absolute;
-  transform: translateX(5%);
-}
-
 #contIndex {
   background-color: #ffcadb;
 }
