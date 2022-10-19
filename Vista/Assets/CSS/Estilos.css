@@ -71,8 +71,19 @@ footer {
   margin-right: auto;
   width: fit-content;
   height: 60px;
+  border:none;
 }
 
 #librerias {
   margin: 20px;
+}
+
+#botonPdf {
+  background-color: #e33670;
+  border-color: #e91e63;
+}
+
+#botonModal {
+  background-color: #e91e63;
+  border:none;
 }
