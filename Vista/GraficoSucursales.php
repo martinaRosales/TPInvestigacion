@@ -2,7 +2,7 @@
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/geodata/argentinaLow.js"></script>
 
-<div id="GraficoSucursales"  class="contenedorGrafico"></div>
+<div id="GraficoSucursales"  class="contenedorGrafico content-align-center"></div>
 
 <script>
     // Create root and chart
