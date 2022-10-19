@@ -29,7 +29,7 @@ $result = $obj_controlador->buscar(null);
                 <select id="venta" name="venta" class="form-select" aria-label="Default select example">
                   <?php
                   foreach ($result as $row) {
-                    echo '<option value="' . $row->getIdVenta() . '">' . $row->getIdVenta() . '</option>';
+                    echo '<option value="' . $row->getIdVenta() . '">' .'Venta n&uacute;mero '. $row->getIdVenta() . '</option>';
                   }
                   ?>
                 </select>
