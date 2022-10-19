@@ -3,22 +3,14 @@
 <script src="https://cdn.amcharts.com/lib/5/geodata/argentinaLow.js"></script>
 
 <style>
-
 #chart_sucursales {
-  width: 100%;
-  height: 400px;
+  padding: 0% 15%;
 }
 </style>
 
-<style>
-#chart_sucursales {
-  width: 100%;
-  height: 400px;
-}
-</style>
 
 <div class="container-fluid">
-<div id="chart_sucursales"></div>
+<div id="chart_sucursales" class="grafico contenedorGrafico"></div>
 </div>
 <script>
     // Create root and chart
