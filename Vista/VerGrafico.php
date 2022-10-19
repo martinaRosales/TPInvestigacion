@@ -7,7 +7,7 @@ $obj_controlador = new C_Venta();
 $result = $obj_controlador->buscar(null);
 
 ?>
-<div class="container text-center">
+<div class="container text-center" style="margin:30px;height: 200vh;">
   <div class=" row bg-dark justify-content-center">
     <div class="container">
       <br />
@@ -102,8 +102,8 @@ $result = $obj_controlador->buscar(null);
             <p></p> -->
         <?php include_once('GraficoSucursales.php') ?>
       </div>
-
     </div>
+    
   </div>
 
 

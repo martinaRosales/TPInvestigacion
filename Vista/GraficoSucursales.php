@@ -2,6 +2,14 @@
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/geodata/argentinaLow.js"></script>
 
+<style>
+
+#chart_sucursales {
+  width: 100%;
+  height: 400px;
+}
+</style>
+
 <div class="container-fluid">
 <div id="chart_sucursales"></div>
 </div>
@@ -13,7 +21,6 @@
             panX: "rotateX"
         })
     );
-
     // Create polygon series
     var polygonSeries = chart.series.push(
         am5map.MapPolygonSeries.new(root, {
@@ -59,5 +66,6 @@
                 fill: am5.color(0xffba00)
             })
         });
+
     });
 </script>
