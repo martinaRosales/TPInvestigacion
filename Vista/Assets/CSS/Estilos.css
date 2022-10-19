@@ -56,6 +56,7 @@ footer {
   margin-right: auto;
 }
 
+
 #imagenCarousel {
   border-radius: 8px;
     display: block;
@@ -65,13 +66,11 @@ footer {
 }
 
 #titulo{
-  background-image: url("../Img/fondo.png");
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
   height: 60px;
-  border:none;
 }
 
 #librerias {
@@ -87,3 +86,4 @@ footer {
   background-color: #e91e63;
   border:none;
 }
+
