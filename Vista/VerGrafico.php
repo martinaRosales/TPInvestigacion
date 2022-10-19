@@ -8,7 +8,7 @@ $result = $obj_controlador->buscar(null);
 
 ?>
 <div class="container text-center mx-auto" style="margin:30px;height: 150vh;">
-  <div class=" row bg-dark justify-content-center">
+  <div class=" row bg-dark justify-content-center" style="padding-bottom: 20px;">
     <div class="container">
       <br />
       <p><a target="_blank" href="generar_pdf_productos_disponibles.php" class="btn btn-primary" id="botonPdf">Descargar PDF de productos disponibles</a>
