@@ -53,10 +53,10 @@ $data = json_encode(array_values($data));
         }));
 
         root.interfaceColors.set("text", am5.color(0xffffff));
-        
+
         // Set data
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
-        
+
         var data = <?php echo $data; ?>;
         series.data.setAll(data);
 
@@ -80,13 +80,18 @@ $data = json_encode(array_values($data));
         });
         legend.data.setAll(series.dataItems);
 
+        //exporting
+        var exporting = am5plugins_exporting.Exporting.new(root, {
+            menu: am5plugins_exporting.ExportingMenu.new(root, {}),
+            htmlOptions: {
+                disabled: true
+            }
+        });
         // Play initial series animation
         // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
         series.appear(1000, 100);
 
     }); // end am5.ready()
-
-    
 </script>
 
 <!-- HTML -->

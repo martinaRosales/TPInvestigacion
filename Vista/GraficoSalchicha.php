@@ -70,6 +70,13 @@ var legend = chart.children.moveValue(am5.Legend.new(root, {
 
 root.interfaceColors.set("text", am5.color(0xffffff));
 
+//exporting
+var exporting = am5plugins_exporting.Exporting.new(root, {
+            menu: am5plugins_exporting.ExportingMenu.new(root, {}),
+            htmlOptions: {
+                disabled: true
+            }
+        });
 
 // Play  initial se ries animation
 // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series

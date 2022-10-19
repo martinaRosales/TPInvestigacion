@@ -3,14 +3,14 @@
 <script src="https://cdn.amcharts.com/lib/5/geodata/argentinaLow.js"></script>
 
 <style>
-#chart_sucursales {
-  padding: 0% 15%;
-}
+    #chart_sucursales {
+        padding: 0% 15%;
+    }
 </style>
 
 
 <div class="container-fluid">
-<div id="chart_sucursales" class="grafico contenedorGrafico"></div>
+    <div id="chart_sucursales" class="grafico contenedorGrafico"></div>
 </div>
 <script>
     // Create root and chart
@@ -88,7 +88,7 @@
         return am5.Bullet.new(root, {
             sprite: am5.Circle.new(root, {
                 radius: 5,
-                fill: am5.color(0xffba00),
+                fill: am5.color(0xe91e63),
                 tooltipText: `{name}`
             })
         });
@@ -97,4 +97,12 @@
 
     root.interfaceColors.set("text", am5.color(0xffffff));
 
+    //exporting
+    var exporting = am5plugins_exporting.Exporting.new(root, {
+        menu: am5plugins_exporting.ExportingMenu.new(root, {}),
+        htmlOptions: {
+            disabled: true
+        }
+    });
+    
 </script>
