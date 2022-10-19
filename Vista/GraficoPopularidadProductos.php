@@ -84,6 +84,8 @@ $data = json_encode(array_values($data));
         series.appear(1000, 100);
 
     }); // end am5.ready()
+
+    root.interfaceColors.set("text", am5.color(0xffffff));
 </script>
 
 <!-- HTML -->

@@ -68,7 +68,7 @@ var legend = chart.children.moveValue(am5.Legend.new(root, {
   centerX: am5.p50
 }), 0);
 
-
+root.interfaceColors.set("text", am5.color(0xffffff));
 
 
 // Play  initial se ries animation

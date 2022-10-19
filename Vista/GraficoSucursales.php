@@ -95,4 +95,6 @@
 
     });
 
+    root.interfaceColors.set("text", am5.color(0xffffff));
+
 </script>
