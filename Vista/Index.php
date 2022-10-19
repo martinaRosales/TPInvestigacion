@@ -18,7 +18,7 @@ include_once("Common/Header.php");
                         <img src="Assets/Img/Index/perfil.jpg" id="imagenCarousel" class="d-block w-100" alt="Logo de Besto3D">
                         </div>
                         <div class="carousel-item">
-                        <img src="Assets/Img/Index/Slide 2.jpeg" id="imagenCarousel" class="d-block w-100" alt="Imagen del stand">
+                        <img src="Assets/Img/Index/Slide 2.jpg" id="imagenCarousel" class="d-block w-100" alt="Imagen del stand">
                         </div>
                         <div class="carousel-item">
                         <img src="Assets/Img/Index/Slide 3.jpg" id="imagenCarousel" class="d-block w-100" alt="Foto cosplay de Besto Anto y Besto Marti">
