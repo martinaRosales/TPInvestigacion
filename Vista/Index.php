@@ -15,13 +15,13 @@ include_once("Common/Header.php");
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                        <img src="Assets/Img/Index/perfil.jpg" id="imagenCarousel" class="d-block w-100" alt="Logo de Besto3D">
+                        <img src="Assets/Img/Index/tarjetaBesto.jpg" id="imagenCarousel" class="d-block w-100" alt="Logo de Besto3D">
                         </div>
                         <div class="carousel-item">
-                        <img src="Assets/Img/Index/Slide 2.jpg" id="imagenCarousel" class="d-block w-100" alt="Imagen del stand">
+                        <img src="Assets/Img/Index/fotoStand.jpg" id="imagenCarousel" class="d-block w-100" alt="Imagen del stand">
                         </div>
                         <div class="carousel-item">
-                        <img src="Assets/Img/Index/Slide 3.jpg" id="imagenCarousel" class="d-block w-100" alt="Foto cosplay de Besto Anto y Besto Marti">
+                        <img src="Assets/Img/Index/fotoNakama.jpg" id="imagenCarousel" class="d-block w-100" alt="Foto cosplay de Besto Anto y Besto Marti">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -36,7 +36,7 @@ include_once("Common/Header.php");
 
             </div>
 
-        <div id="librerias" class="text-light col-9 ms-2 mb-2" >
+        <div id="librerias" class="text-light col-9 mt-3 ms-2 mb-2" >
             Las librer&iacute;as utilizadas para este trabajo fueron Amcharts y TCPDF <br>
             <img src="Assets/Img/Index/logoAmcharts.png" id="logo"/>
             <img src="Assets/Img/Index/logoPdf.png" id="logo"/>
