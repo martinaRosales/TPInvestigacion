@@ -2,7 +2,7 @@
 include_once("Common/Header.php");
 ?>
 
-<div class="container" style="margin:30px;height:80vh;" id="body">
+<div class="container" style="margin:30px;height:80vh;">
     <div class="container bg-dark" id="Index"> 
             <div class="display-1 text-light  text-center" id="titulo"><h1>¡Bienvenidxs al cat&aacute;logo Besto3D!</h1></div>
             <div class="container" id="contIndex" >
