@@ -49,7 +49,7 @@ $vista = '<!DOCTYPE html>
     		   </div>
                <div style="background-color: white;">                   
                <table style=" text-align: center;font-size: 7px !important; font-family: sans-serif;">
-                   <tr style="background-color: #0083b0; color: #fff">                                 
+                   <tr style="background-color: #e91e63; color: #fff">                                 
                             '. $encabezado.'                    
                    </tr>    ';
                    $i = 1;
@@ -77,7 +77,7 @@ $vista = '<!DOCTYPE html>
                         $vista .=  '<br/>';
                        
                         $vista .=  '<table style=" text-align: center;font-size: 7px !important; font-family: sans-serif;">';
-                        $vista .=  '  <tr style="background-color: #0083b0; color: #fff">'.$encabezado.'</tr> ';    
+                        $vista .=  '  <tr style="background-color: #e91e63; color: #fff">'.$encabezado.'</tr> ';    
 
                     }
                     elseif($primera_pagina==false && $cant_productos_listados==42){  
@@ -87,7 +87,7 @@ $vista = '<!DOCTYPE html>
                         $vista .= '<br pagebreak="true"/>';
                         $vista .=  '<br/>';                              
                         $vista .=  '<table style=" text-align: center;font-size: 7px !important; font-family: sans-serif;">';
-                        $vista .=  '<tr style="background-color: #0083b0; color: #fff">'.$encabezado.'</tr> ';
+                        $vista .=  '<tr style="background-color: #e91e63; color: #fff">'.$encabezado.'</tr> ';
                     }
                     $cant_productos_listados++;
                  }     

@@ -2,11 +2,12 @@
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/geodata/argentinaLow.js"></script>
 
-<div id="chartdiv"></div>
-
+<div class="container-fluid">
+<div id="chart_sucursales"></div>
+</div>
 <script>
     // Create root and chart
-    var root = am5.Root.new("chartdiv");
+    var root = am5.Root.new("chart_sucursales");
     var chart = root.container.children.push(
         am5map.MapChart.new(root, {
             panX: "rotateX"
