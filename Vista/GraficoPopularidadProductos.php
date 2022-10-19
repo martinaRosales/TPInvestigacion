@@ -52,7 +52,8 @@ $data = json_encode(array_values($data));
             categoryField: "NOMBRE"
         }));
 
-
+        root.interfaceColors.set("text", am5.color(0xffffff));
+        
         // Set data
         // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
         
@@ -85,7 +86,7 @@ $data = json_encode(array_values($data));
 
     }); // end am5.ready()
 
-    root.interfaceColors.set("text", am5.color(0xffffff));
+    
 </script>
 
 <!-- HTML -->
