@@ -2,9 +2,9 @@
 include_once("Common/Header.php");
 ?>
 
-<div class="container " style="margin:30px;height:80vh; position:relative;">
-    <div class="container bg-dark"> 
-            <div class="display-1 text-light" id="titulo"><h1>¡Bienvenidxs al cat&aacute;logo Besto3D!</h1></div>
+<div class="container" style="margin:30px;height:80vh;" id="body">
+    <div class="container bg-dark" id="Index"> 
+            <div class="display-1 text-light  text-center" id="titulo"><h1>¡Bienvenidxs al cat&aacute;logo Besto3D!</h1></div>
             <div class="container" id="contIndex" >
                 <div id="carouselExampleIndicators" class="carousel slide start-50 translate-middle-x" data-bs-ride="true">
                     <div class="carousel-indicators">
