@@ -108,3 +108,6 @@ $result = $obj_controlador->buscar(null);
 
 
   <script src="Assets/Js/VerGraficos.js"></script>
+  <?php
+include_once("Common/Footer.php");
+?>
