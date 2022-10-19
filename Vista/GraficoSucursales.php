@@ -2,22 +2,32 @@
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/geodata/argentinaLow.js"></script>
 
-<div id="GraficoSucursales"  class="contenedorGrafico content-align-center"></div>
+<style>
 
+#chart_sucursales {
+  width: 100%;
+  height: 400px;
+}
+</style>
+
+<style>
+#chart_sucursales {
+  width: 100%;
+  height: 400px;
+}
+</style>
+
+<div class="container-fluid">
+<div id="chart_sucursales"></div>
+</div>
 <script>
     // Create root and chart
-    var root = am5.Root.new("GraficoSucursales");
-
-    root.setThemes([
-        am5themes_Animated.new(root)
-    ]);
-
+    var root = am5.Root.new("chart_sucursales");
     var chart = root.container.children.push(
         am5map.MapChart.new(root, {
             width: 200
         })
     );
-
     var cont = chart.children.push(am5.Container.new(root, {
         layout: root.horizontalLayout,
         x: 20,
@@ -90,6 +100,7 @@
                 tooltipText: `{name}`
             })
         });
+
     });
 
 </script>
