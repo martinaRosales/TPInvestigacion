@@ -79,9 +79,8 @@ chart.appear(1000, 100);
 </script>
 
 <!-- HTML -->
-<div id="VentasMensuales" class="container-m">
+<div class="container-m">
 
-    <input type="hidden" name="grafico_1" id="gafico_1">
     <div id="graficoConocieron" class="contenedorGrafico"></div>
 
 

@@ -2,16 +2,27 @@
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/geodata/argentinaLow.js"></script>
 
-<div id="chartdiv"></div>
+<div id="GraficoSucursales"  class="contenedorGrafico"></div>
 
 <script>
     // Create root and chart
-    var root = am5.Root.new("chartdiv");
+    var root = am5.Root.new("GraficoSucursales");
+
+    root.setThemes([
+        am5themes_Animated.new(root)
+    ]);
+
     var chart = root.container.children.push(
         am5map.MapChart.new(root, {
-            panX: "rotateX"
+            width: 200
         })
     );
+
+    var cont = chart.children.push(am5.Container.new(root, {
+        layout: root.horizontalLayout,
+        x: 20,
+        y: 40
+    }));
 
     // Create polygon series
     var polygonSeries = chart.series.push(
@@ -26,21 +37,41 @@
         "features": [{
                 "type": "Feature",
                 "properties": {
-                    "name": "CiudadA"
+                    "name": "San Luis"
                 },
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [-65.1692, -27.9097]
+                    "coordinates": [-66.006, -33.5555]
                 }
             },
             {
                 "type": "Feature",
                 "properties": {
-                    "name": "CiudadB"
+                    "name": "Neuquen"
                 },
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [-60.2944, -33.2567]
+                    "coordinates": [-69.5065, -38.5007]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "name": "Rio Negro"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-67.5065, -40.5007]
+                }
+            },
+            {
+                "type": "Feature",
+                "properties": {
+                    "name": "Buenos Aires"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [-58.5065, -37.5007]
                 }
             }
         ]
@@ -55,8 +86,10 @@
         return am5.Bullet.new(root, {
             sprite: am5.Circle.new(root, {
                 radius: 5,
-                fill: am5.color(0xffba00)
+                fill: am5.color(0xffba00),
+                tooltipText: `{name}`
             })
         });
     });
+
 </script>

@@ -57,13 +57,13 @@ $result = $obj_controlador->buscar(null);
             <p></p> -->
         <?php include_once('GraficoPopularidadProductos.php') ?>
       </div>
-      <div class="container col-4">
+      <div class="container col-8">
         <h2 class="text-light">Como nos conocieron</h2>
         <!-- <button class="btn btn-primary" onClick="mostrarGrafico('PopularidadProductos');">Ver</button>
             <p></p> -->
         <?php include_once('GraficoSalchicha.php') ?>
       </div>
-      <div class="container col-8">
+      <div class="container col-4">
         <h2 class="text-light">Sucursales</h2></h2>
         <!-- <button class="btn btn-primary" onClick="mostrarGrafico('PopularidadProductos');">Ver</button>
             <p></p> -->
