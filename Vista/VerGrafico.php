@@ -46,7 +46,7 @@ $result = $obj_controlador->buscar(null);
 
       <div class="modal fade" id="Modal_pdf_montos" tabindex="-1" aria-labelledby="Modal_pdf_montos" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content bg-dark text-light">
       <div class="modal-header">
         <h5 class="modal-title" id=Modal_pdf_montosLabel">Generar PDF por Montos</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -70,7 +70,7 @@ $result = $obj_controlador->buscar(null);
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-primary">Generar PDF</button>
+        <button type="submit" class="btn btn-primary" id="botonModal">Generar PDF</button>
       </div>
       </form>
     </div>
