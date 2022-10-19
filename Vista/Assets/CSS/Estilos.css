@@ -21,7 +21,7 @@ footer {
   background-color: #e91e63;
 }
 
-#cuerpo {
+#contIndex {
   background-color: #ffcadb;
 }
 
@@ -34,4 +34,45 @@ footer {
   width: 100%;
   height: 500px;
   background-color: rgba(233, 30, 99, 0.3);
+}
+
+#carouselExampleIndicators {
+  width: 500px;
+  
+}
+
+#logo{
+  width: 100px;
+}
+
+#contIndex{
+  width: 540px; 
+  height: fit-content;
+  position:relative; 
+  padding: 20px;
+  display: block;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#imagenCarousel {
+  border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;     
+}
+
+#titulo{
+  background-image: url("../Img/fondo.png");
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: 60px;
+}
+
+#librerias {
+  margin: 20px;
 }
