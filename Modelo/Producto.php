@@ -238,7 +238,7 @@ class Producto{
         $base = new BaseDatos();
         $sql =  "select * from producto";
         if ($monto_min != '' && $monto_max !='') {
-            $sql = $sql . '  WHERE precio > '.$monto_min.' AND precio < '.$monto_max;
+            $sql = $sql . '  WHERE precio > '.$monto_min.' AND precio < '.$monto_max.' ORDER BY precio ASC';
         }
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
