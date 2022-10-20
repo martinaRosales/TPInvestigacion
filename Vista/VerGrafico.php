@@ -91,7 +91,7 @@ $result = $obj_controlador->buscar(null);
       <div class="container col-8">
         <h2 class="text-light">Como nos conocieron</h2>
         
-        <?php include_once('GraficoSalchicha.php') ?>
+        <?php include_once('GraficoConocieron.php') ?>
       </div>
       <div class="container col-4">
         <h2 class="text-light">Sucursales</h2></h2>
