@@ -66,12 +66,11 @@ class Pdf extends TCPDF
 		return '<p class="first">' . $text . '</p>';
 	}
 
-	public function generar_y_descargar_pdf_informe($nombre_archivo_sin_extension, $subject, $message, $page_orientation = 'P', $output_type = 'I', $image_width = 32, $image_height = 32)
+	public function generar_y_descargar_pdf_informe($nombre_archivo_sin_extension, $subject, $message, $page_orientation = 'P', $output_type = 'I')
 	{
 		$pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
 		$pdf->SetPrintHeader(false);
 		$pdf->setPrintFooter(false);
-		$pdf->SetDisplayMode('real', 'default');
 		$pdf->SetMargins(20, 3, 20, true);
 
 
@@ -81,13 +80,7 @@ class Pdf extends TCPDF
 		$pdf->AddPage($page_orientation, 'A4', true);
 
 		$pdf->writeHTML($string_to_print, true, false, true, false, '');
-
-		$pdf->SetLineStyle(array('width' => 0.3, 'color' => array('#666666')));
-
-		if ($output_type == 'E' || $output_type == 'S') {
-			return $pdf->Output($nombre_archivo_sin_extension . '.pdf', $output_type);
-		}
-
+		
 		$pdf->Output($nombre_archivo_sin_extension . '.pdf', $output_type);
 	}
 }

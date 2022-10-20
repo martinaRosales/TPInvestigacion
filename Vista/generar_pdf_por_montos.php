@@ -14,12 +14,11 @@ $encabezado = '<td width="20" ><b>#</b></td>
                 <td width="90"><b>Precio</b></td>
                 ';                
                 
-$vista = '';
 $vista = '<!DOCTYPE html>
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<title>Productos Disponibles</title>
+		<title>Productos Por Montos</title>
 		<meta content="besto" name="description" />
 		<meta content="" name="equipo_alfa_buena_onda" />
 		<style>
@@ -102,6 +101,6 @@ $vista .= '
 include('../Biblioteca/Pdf.php');
 $pdf = new Pdf();
 
-echo $pdf->generar_y_descargar_pdf_informe('productos_por_montos', array(), $vista, $page_orientation = 'P', $output_type = 'I', $image_width = 32, $image_height = 32)
+echo $pdf->generar_y_descargar_pdf_informe('productos_por_montos', 'Productos por Monto', $vista, $page_orientation = 'P');
 	
 ?>
