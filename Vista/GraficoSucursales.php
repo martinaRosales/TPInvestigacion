@@ -17,7 +17,9 @@
     var root = am5.Root.new("chart_sucursales");
     var chart = root.container.children.push(
         am5map.MapChart.new(root, {
-            width: 200
+            width: 200,
+            panX: "none",
+            wheelY: "none"
         })
     );
     var cont = chart.children.push(am5.Container.new(root, {
@@ -104,5 +106,4 @@
             disabled: true
         }
     });
-    
 </script>
