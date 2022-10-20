@@ -7,7 +7,7 @@ $obj_controlador = new C_Venta();
 $result = $obj_controlador->buscar(null);
 
 ?>
-<div class="container text-center mx-auto" style="margin:30px;height: 150vh;">
+<div class="container text-center mx-auto" style="margin:30px;height: 180vh;">
   <div class=" row bg-dark justify-content-center" style="padding-bottom: 25px;">
     <div class="container">
       <br />
